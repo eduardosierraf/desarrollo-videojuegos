@@ -1,13 +1,13 @@
 # Desarrollo de Videojuegos
 
 **Programa:** Ingeniería de Sistemas — Universidad de La Guajira
-**Docente:** Eduardo Luis Sierra Fragozo ([esierra@uniguajira.edu.co](mailto:esierra@uniguajira.edu.co))
+**Docente:** Eduardo Luis Sierra Fragozo ([elsierra@uniguajira.edu.co](mailto:elsierra@uniguajira.edu.co))
 
 Material de la asignatura Desarrollo de Videojuegos (Unity), independiente de periodo académico.
 
 ## Contenido del repositorio
 
-- `index.html` — presentación de la asignatura (portada, panorama de la industria, el proyecto del semestre, stack, temario, evaluación corte a corte, asistencia y requisitos técnicos).
+- `index.html` — presentación de la asignatura (portada, el proyecto del semestre, stack, temario, evaluación corte a corte, asistencia y requisitos técnicos).
 - `assets/` — recursos gráficos de la presentación (vacía por ahora).
 
 ## Cómo abrir la presentación

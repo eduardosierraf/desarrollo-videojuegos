@@ -179,27 +179,6 @@
     color: var(--muted);
   }
 
-  /* ---------- Slide 2 — pregunta de apertura ---------- */
-  .pregunta__text {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: clamp(1.5rem, 3.4vw, 2.3rem);
-    line-height: 1.25;
-    letter-spacing: -0.015em;
-    max-width: 22ch;
-    margin: 0 0 clamp(28px, 4vw, 40px);
-    padding-top: clamp(18px, 2.4vw, 24px);
-    border-top: 3px solid var(--ink);
-  }
-  .pregunta__nota {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    color: var(--muted);
-    max-width: 46ch;
-    margin: 0 0 clamp(26px, 3.4vw, 34px);
-  }
-
   /* ---------- Rules / general lists ---------- */
   .big-list {
     list-style: none;
@@ -239,7 +218,7 @@
     margin: clamp(22px, 3vw, 30px) 0 0;
   }
 
-  /* ---------- Stat card (panorama de la industria / asistencia) ---------- */
+  /* ---------- Stat card (asistencia) ---------- */
   .panorama {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -612,7 +591,7 @@
   <span class="frame__tick frame__tick--tr"></span>
 </div>
 <div class="progress" id="progress"></div>
-<div class="counter" id="counter">01 / 15</div>
+<div class="counter" id="counter">01 / 13</div>
 <span class="brandmark">Desarrollo de Videojuegos</span>
 <nav class="dots" id="dots" aria-label="Navegación de diapositivas"></nav>
 <div class="controls">
@@ -632,34 +611,12 @@
     </dl>
     <div class="docente">
       <p class="docente__name">Eduardo Luis Sierra Fragozo</p>
-      <p class="docente__email"><a href="mailto:esierra@uniguajira.edu.co">esierra@uniguajira.edu.co</a></p>
+      <p class="docente__email"><a href="mailto:elsierra@uniguajira.edu.co">elsierra@uniguajira.edu.co</a></p>
     </div>
     <p class="hint">Desliza o pulsa → para continuar</p>
   </section>
 
-  <section class="slide" id="slide-2" data-title="Pregunta de apertura">
-    <p class="eyebrow">Para abrir la discusión</p>
-    <h2 class="pregunta__text">¿Qué hace que algo sea un videojuego y no solo un programa interactivo?</h2>
-    <p class="pregunta__nota">Discusión socrática — sin respuesta cerrada de entrada. El espacio queda abierto para lo que salga en clase.</p>
-  </section>
-
-  <section class="slide" id="slide-3" data-title="Panorama de la industria">
-    <span class="section-index">Contexto</span>
-    <h2 class="slide-title">La industria en Colombia</h2>
-    <div class="panorama">
-      <div class="stat">
-        <span class="stat__figure">~80</span>
-        <p class="stat__text">empresas de desarrollo de videojuegos operan hoy en <b>Colombia</b>.</p>
-      </div>
-      <ul class="big-list big-list--tight">
-        <li>Concentradas casi todas en <b>Bogotá, Cali y Medellín</b> — ahí está el clúster de talento y estudios.</li>
-        <li>El <b>Caribe colombiano y La Guajira</b> no tienen formación especializada en esta área todavía.</li>
-        <li>Buena parte del trabajo de la industria es <b>remoto</b>: se puede ejercer desde el territorio sin salir de él.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="slide" id="slide-4" data-title="El proyecto del semestre">
+  <section class="slide" id="slide-2" data-title="El proyecto del semestre">
     <span class="section-index">El semestre</span>
     <h2 class="slide-title">Un juego, construido por cortes</h2>
     <div class="proyectos">
@@ -677,7 +634,7 @@
     <p class="proyectos__caption">Cada estudiante (o equipo) elige una sola ruta al inicio del semestre y la mantiene durante todo el curso: ese mismo juego crece corte a corte hasta quedar completo.</p>
   </section>
 
-  <section class="slide" id="slide-5" data-title="Trae la idea del juego">
+  <section class="slide" id="slide-3" data-title="Trae la idea del juego">
     <span class="section-index">Semana 1</span>
     <h2 class="slide-title">Trae la idea del juego</h2>
     <ul class="big-list">
@@ -687,7 +644,7 @@
     </ul>
   </section>
 
-  <section class="slide" id="slide-6" data-title="Stack de la asignatura">
+  <section class="slide" id="slide-4" data-title="Stack de la asignatura">
     <span class="section-index">Herramientas</span>
     <h2 class="slide-title">Stack de la asignatura</h2>
     <ol class="agenda">
@@ -699,7 +656,7 @@
     </ol>
   </section>
 
-  <section class="slide" id="slide-7" data-title="Temario">
+  <section class="slide" id="slide-5" data-title="Temario">
     <span class="section-index">Temario</span>
     <h2 class="slide-title">Unidades del curso</h2>
     <ol class="agenda">
@@ -712,7 +669,7 @@
     </ol>
   </section>
 
-  <section class="slide" id="slide-8" data-title="Evaluación">
+  <section class="slide" id="slide-6" data-title="Evaluación">
     <span class="section-index">Evaluación</span>
     <h2 class="slide-title">Cómo se compone la nota final</h2>
     <p class="evaluation__lead">Tres cortes suman el 100% de la nota final. Cada corte se detalla en las entregas que lo componen.</p>
@@ -725,68 +682,67 @@
     <p class="norma">Distribución institucional de cortes · Reglamento Estudiantil, Acuerdo 026 de 2018 · Calificación de 0.0 a 5.0</p>
   </section>
 
-  <!--
-    Los % de cada ítem dentro de un corte están repartidos parejo entre las
-    entregas de ese corte (placeholder). Ajusta corte-item__pct y --pct una
-    vez tengas la rúbrica definitiva — el total de cada corte (30/35/35) sí
-    es la distribución institucional real, eso no debe cambiar.
-  -->
-  <section class="slide" id="slide-9" data-title="Corte 1">
+  <section class="slide" id="slide-7" data-title="Corte 1">
     <span class="section-index">Evaluación · Corte 1</span>
     <h2 class="slide-title">Corte 1 — primer avance</h2>
     <div class="corte">
       <header><span class="corte__num">Total del corte</span><span class="corte__weight">30%</span></header>
       <div class="corte__items">
         <div class="corte-item">
-          <div class="corte-item__row"><span class="corte-item__name">Primer avance del juego</span><span class="corte-item__pct">30.0%</span></div>
-          <div class="meter"><span style="--pct:100"></span></div>
-          <span class="corte-item__note">Movimiento, salto y un collider funcional</span>
+          <div class="corte-item__row"><span class="corte-item__name">Sustentación del videojuego</span><span class="corte-item__pct">20.0%</span></div>
+          <div class="meter"><span style="--pct:67"></span></div>
+          <span class="corte-item__note">Defensa del primer avance: movimiento, salto y un collider funcional</span>
+        </div>
+        <div class="corte-item">
+          <div class="corte-item__row"><span class="corte-item__name">Exposición en grupo</span><span class="corte-item__pct">10.0%</span></div>
+          <div class="meter"><span style="--pct:33"></span></div>
+          <span class="corte-item__note">Presentación del avance en formato de grupo</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide" id="slide-10" data-title="Corte 2">
+  <section class="slide" id="slide-8" data-title="Corte 2">
     <span class="section-index">Evaluación · Corte 2</span>
     <h2 class="slide-title">Corte 2 — UI, efectos y niveles</h2>
     <div class="corte">
       <header><span class="corte__num">Total del corte</span><span class="corte__weight">35%</span></header>
       <div class="corte__items">
         <div class="corte-item">
-          <div class="corte-item__row"><span class="corte-item__name">Nivel completo</span><span class="corte-item__pct">17.5%</span></div>
-          <div class="meter"><span style="--pct:50"></span></div>
+          <div class="corte-item__row"><span class="corte-item__name">Nivel completo</span><span class="corte-item__pct">20.0%</span></div>
+          <div class="meter"><span style="--pct:57"></span></div>
           <span class="corte-item__note">Un nivel jugable, con UI y efectos incorporados</span>
         </div>
         <div class="corte-item">
-          <div class="corte-item__row"><span class="corte-item__name">Integración en el juego completo</span><span class="corte-item__pct">17.5%</span></div>
-          <div class="meter"><span style="--pct:50"></span></div>
-          <span class="corte-item__note">Cómo ese nivel se conecta con el resto del proyecto</span>
+          <div class="corte-item__row"><span class="corte-item__name">Preentrega del nivel</span><span class="corte-item__pct">15.0%</span></div>
+          <div class="meter"><span style="--pct:43"></span></div>
+          <span class="corte-item__note">Obligatoria — condición para presentar el nivel completo</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide" id="slide-11" data-title="Corte 3">
+  <section class="slide" id="slide-9" data-title="Corte 3">
     <span class="section-index">Evaluación · Corte 3</span>
     <h2 class="slide-title">Corte 3 — cierre del proyecto</h2>
     <div class="corte">
       <header><span class="corte__num">Total del corte</span><span class="corte__weight">35%</span></header>
       <div class="corte__items">
         <div class="corte-item">
-          <div class="corte-item__row"><span class="corte-item__name">Sustentación en clase</span><span class="corte-item__pct">17.5%</span></div>
-          <div class="meter"><span style="--pct:50"></span></div>
-          <span class="corte-item__note">Presentación y defensa del proyecto frente al grupo</span>
+          <div class="corte-item__row"><span class="corte-item__name">Contribución en la sala</span><span class="corte-item__pct">25.0%</span></div>
+          <div class="meter"><span style="--pct:71"></span></div>
+          <span class="corte-item__note">Sustentación y defensa del proyecto frente al grupo</span>
         </div>
         <div class="corte-item">
-          <div class="corte-item__row"><span class="corte-item__name">Juego completo</span><span class="corte-item__pct">17.5%</span></div>
-          <div class="meter"><span style="--pct:50"></span></div>
+          <div class="corte-item__row"><span class="corte-item__name">Juego completo</span><span class="corte-item__pct">10.0%</span></div>
+          <div class="meter"><span style="--pct:29"></span></div>
           <span class="corte-item__note">Entrega final del juego terminado</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide" id="slide-12" data-title="Asistencia">
+  <section class="slide" id="slide-10" data-title="Asistencia">
     <span class="section-index">Reglas</span>
     <h2 class="slide-title">Asistencia</h2>
     <div class="panorama">
@@ -811,7 +767,7 @@
     <p class="norma">Reglamento Estudiantil de Pregrado · Universidad de La Guajira · Acuerdo 026 de 2018</p>
   </section>
 
-  <section class="slide" id="slide-13" data-title="Política de entregas">
+  <section class="slide" id="slide-11" data-title="Política de entregas">
     <span class="section-index">Entregas</span>
     <h2 class="slide-title">Política de entregas</h2>
     <ul class="big-list">
@@ -820,7 +776,7 @@
     </ul>
   </section>
 
-  <section class="slide" id="slide-14" data-title="Requisitos técnicos">
+  <section class="slide" id="slide-12" data-title="Requisitos técnicos">
     <span class="section-index">Antes de empezar</span>
     <h2 class="slide-title">Requisitos técnicos</h2>
     <ul class="big-list">
@@ -830,12 +786,12 @@
     </ul>
   </section>
 
-  <section class="slide slide--close" id="slide-15" data-title="Cierre">
+  <section class="slide slide--close" id="slide-13" data-title="Cierre">
     <p class="eyebrow">Para cerrar</p>
     <h2 class="slide-title">El proyecto final se expone</h2>
     <div class="contact-recap">
       <span>Eduardo Luis Sierra Fragozo</span>
-      <span><a href="mailto:esierra@uniguajira.edu.co">esierra@uniguajira.edu.co</a></span>
+      <span><a href="mailto:elsierra@uniguajira.edu.co">elsierra@uniguajira.edu.co</a></span>
       <span>Desarrollo de Videojuegos · Universidad de La Guajira</span>
     </div>
     <p class="close__note">El proyecto final se presenta públicamente en el <b>GameFest</b>: su juego, jugado por otros, frente a otros.</p>
