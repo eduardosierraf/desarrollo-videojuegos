@@ -7,7 +7,7 @@ Material de la asignatura Desarrollo de Videojuegos (Unity), independiente de pe
 
 ## Contenido del repositorio
 
-- `index.html` — presentación de la asignatura (portada, panorama de la industria, proyectos del curso, stack, temario, evaluación, asistencia y requisitos técnicos).
+- `index.html` — presentación de la asignatura (portada, panorama de la industria, el proyecto del semestre, stack, temario, evaluación corte a corte, asistencia y requisitos técnicos).
 - `assets/` — recursos gráficos de la presentación (vacía por ahora).
 
 ## Cómo abrir la presentación

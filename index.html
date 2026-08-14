@@ -302,7 +302,7 @@
   .swatch--ink { background: var(--ink); }
   .swatch--margen { background: var(--red-wash); border: 1.5px solid var(--red); }
 
-  /* ---------- Proyectos (slide 4) ---------- */
+  /* ---------- Rutas del proyecto (slide "El proyecto del semestre") ---------- */
   .proyectos {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -426,6 +426,65 @@
     letter-spacing: 0.04em;
     margin: 0;
   }
+
+  /* ---------- Corte detail (Corte 1 / 2 / 3) ---------- */
+  .corte {
+    max-width: 820px;
+    width: 100%;
+    border: 1px solid var(--line);
+    background: var(--paper-raised);
+  }
+  .corte > header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: clamp(18px, 2.4vw, 26px) clamp(22px, 3vw, 32px);
+    border-bottom: 3px solid var(--ink);
+  }
+  .corte__num {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .corte__weight {
+    font-family: var(--font-mono);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--red);
+  }
+  .corte__items {
+    padding: clamp(4px, 1vw, 8px) clamp(22px, 3vw, 32px) clamp(20px, 2.6vw, 28px);
+    display: flex;
+    flex-direction: column;
+  }
+  .corte-item { padding: clamp(16px, 2vw, 22px) 0; border-bottom: 1px solid var(--line); }
+  .corte-item:last-child { border-bottom: none; }
+  .corte-item__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .corte-item__name { font-size: clamp(1rem, 1.6vw, 1.25rem); font-weight: 500; }
+  .corte-item__pct {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .corte-item__note {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .meter { height: 6px; background: var(--line); width: 100%; }
+  .meter > span { display: block; height: 100%; background: var(--red); width: calc(var(--pct) * 1%); }
 
   /* ---------- Closing slide ---------- */
   .slide--close .slide-title { max-width: 16ch; }
@@ -553,7 +612,7 @@
   <span class="frame__tick frame__tick--tr"></span>
 </div>
 <div class="progress" id="progress"></div>
-<div class="counter" id="counter">01 / 11</div>
+<div class="counter" id="counter">01 / 15</div>
 <span class="brandmark">Desarrollo de Videojuegos</span>
 <nav class="dots" id="dots" aria-label="Navegación de diapositivas"></nav>
 <div class="controls">
@@ -600,25 +659,35 @@
     </div>
   </section>
 
-  <section class="slide" id="slide-4" data-title="Qué van a construir">
+  <section class="slide" id="slide-4" data-title="El proyecto del semestre">
     <span class="section-index">El semestre</span>
-    <h2 class="slide-title">Qué van a construir</h2>
+    <h2 class="slide-title">Un juego, construido por cortes</h2>
     <div class="proyectos">
       <div class="proyecto">
-        <span class="proyecto__num">Proyecto 01</span>
-        <h3 class="proyecto__name">Plataformas 2D</h3>
-        <p class="proyecto__desc">Movimiento, colisiones y diseño de niveles — la base del control de un juego.</p>
+        <span class="proyecto__num">Ruta A</span>
+        <h3 class="proyecto__name">2D</h3>
+        <p class="proyecto__desc">Movimiento lateral, plataformas, colisiones simples.</p>
       </div>
       <div class="proyecto">
-        <span class="proyecto__num">Proyecto 02</span>
-        <h3 class="proyecto__name">Proyecto 3D — temática libre</h3>
-        <p class="proyecto__desc">Un proyecto más ambicioso, con la temática que cada equipo elija.</p>
+        <span class="proyecto__num">Ruta B</span>
+        <h3 class="proyecto__name">3D</h3>
+        <p class="proyecto__desc">Espacio, cámara y colisiones con mayor complejidad.</p>
       </div>
     </div>
-    <p class="proyectos__caption">Los dos se construyen por entregas incrementales a lo largo del semestre, no de una sola vez al final.</p>
+    <p class="proyectos__caption">Cada estudiante (o equipo) elige una sola ruta al inicio del semestre y la mantiene durante todo el curso: ese mismo juego crece corte a corte hasta quedar completo.</p>
   </section>
 
-  <section class="slide" id="slide-5" data-title="Stack de la asignatura">
+  <section class="slide" id="slide-5" data-title="Trae la idea del juego">
+    <span class="section-index">Semana 1</span>
+    <h2 class="slide-title">Trae la idea del juego</h2>
+    <ul class="big-list">
+      <li>La <b>semana siguiente</b> a esta presentación, cada estudiante (o equipo) trae la idea de su juego.</li>
+      <li>Puede ser <b>2D o 3D</b> — la elección queda fija a partir de ahí para todo el semestre.</li>
+      <li>Sin idea traída no hay Corte 1: es la condición para empezar a construir.</li>
+    </ul>
+  </section>
+
+  <section class="slide" id="slide-6" data-title="Stack de la asignatura">
     <span class="section-index">Herramientas</span>
     <h2 class="slide-title">Stack de la asignatura</h2>
     <ol class="agenda">
@@ -630,7 +699,7 @@
     </ol>
   </section>
 
-  <section class="slide" id="slide-6" data-title="Temario">
+  <section class="slide" id="slide-7" data-title="Temario">
     <span class="section-index">Temario</span>
     <h2 class="slide-title">Unidades del curso</h2>
     <ol class="agenda">
@@ -643,10 +712,10 @@
     </ol>
   </section>
 
-  <section class="slide" id="slide-7" data-title="Evaluación">
+  <section class="slide" id="slide-8" data-title="Evaluación">
     <span class="section-index">Evaluación</span>
     <h2 class="slide-title">Cómo se compone la nota final</h2>
-    <p class="evaluation__lead">Tres cortes suman el 100% de la nota final. Cada corte se construye sobre entregas incrementales del proyecto — no hay un solo entregable al final del semestre.</p>
+    <p class="evaluation__lead">Tres cortes suman el 100% de la nota final. Cada corte se detalla en las entregas que lo componen.</p>
     <div class="bar" role="img" aria-label="Distribución de cortes: Corte 1, 30 por ciento. Corte 2, 35 por ciento. Corte 3, 35 por ciento.">
       <div class="bar__segment" style="--w:30">Corte 1 · 30%</div>
       <div class="bar__segment bar__segment--ink" style="--w:35">Corte 2 · 35%</div>
@@ -656,7 +725,68 @@
     <p class="norma">Distribución institucional de cortes · Reglamento Estudiantil, Acuerdo 026 de 2018 · Calificación de 0.0 a 5.0</p>
   </section>
 
-  <section class="slide" id="slide-8" data-title="Asistencia">
+  <!--
+    Los % de cada ítem dentro de un corte están repartidos parejo entre las
+    entregas de ese corte (placeholder). Ajusta corte-item__pct y --pct una
+    vez tengas la rúbrica definitiva — el total de cada corte (30/35/35) sí
+    es la distribución institucional real, eso no debe cambiar.
+  -->
+  <section class="slide" id="slide-9" data-title="Corte 1">
+    <span class="section-index">Evaluación · Corte 1</span>
+    <h2 class="slide-title">Corte 1 — primer avance</h2>
+    <div class="corte">
+      <header><span class="corte__num">Total del corte</span><span class="corte__weight">30%</span></header>
+      <div class="corte__items">
+        <div class="corte-item">
+          <div class="corte-item__row"><span class="corte-item__name">Primer avance del juego</span><span class="corte-item__pct">30.0%</span></div>
+          <div class="meter"><span style="--pct:100"></span></div>
+          <span class="corte-item__note">Movimiento, salto y un collider funcional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-10" data-title="Corte 2">
+    <span class="section-index">Evaluación · Corte 2</span>
+    <h2 class="slide-title">Corte 2 — UI, efectos y niveles</h2>
+    <div class="corte">
+      <header><span class="corte__num">Total del corte</span><span class="corte__weight">35%</span></header>
+      <div class="corte__items">
+        <div class="corte-item">
+          <div class="corte-item__row"><span class="corte-item__name">Nivel completo</span><span class="corte-item__pct">17.5%</span></div>
+          <div class="meter"><span style="--pct:50"></span></div>
+          <span class="corte-item__note">Un nivel jugable, con UI y efectos incorporados</span>
+        </div>
+        <div class="corte-item">
+          <div class="corte-item__row"><span class="corte-item__name">Integración en el juego completo</span><span class="corte-item__pct">17.5%</span></div>
+          <div class="meter"><span style="--pct:50"></span></div>
+          <span class="corte-item__note">Cómo ese nivel se conecta con el resto del proyecto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-11" data-title="Corte 3">
+    <span class="section-index">Evaluación · Corte 3</span>
+    <h2 class="slide-title">Corte 3 — cierre del proyecto</h2>
+    <div class="corte">
+      <header><span class="corte__num">Total del corte</span><span class="corte__weight">35%</span></header>
+      <div class="corte__items">
+        <div class="corte-item">
+          <div class="corte-item__row"><span class="corte-item__name">Sustentación en clase</span><span class="corte-item__pct">17.5%</span></div>
+          <div class="meter"><span style="--pct:50"></span></div>
+          <span class="corte-item__note">Presentación y defensa del proyecto frente al grupo</span>
+        </div>
+        <div class="corte-item">
+          <div class="corte-item__row"><span class="corte-item__name">Juego completo</span><span class="corte-item__pct">17.5%</span></div>
+          <div class="meter"><span style="--pct:50"></span></div>
+          <span class="corte-item__note">Entrega final del juego terminado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-12" data-title="Asistencia">
     <span class="section-index">Reglas</span>
     <h2 class="slide-title">Asistencia</h2>
     <div class="panorama">
@@ -681,7 +811,7 @@
     <p class="norma">Reglamento Estudiantil de Pregrado · Universidad de La Guajira · Acuerdo 026 de 2018</p>
   </section>
 
-  <section class="slide" id="slide-9" data-title="Política de entregas">
+  <section class="slide" id="slide-13" data-title="Política de entregas">
     <span class="section-index">Entregas</span>
     <h2 class="slide-title">Política de entregas</h2>
     <ul class="big-list">
@@ -690,7 +820,7 @@
     </ul>
   </section>
 
-  <section class="slide" id="slide-10" data-title="Requisitos técnicos">
+  <section class="slide" id="slide-14" data-title="Requisitos técnicos">
     <span class="section-index">Antes de empezar</span>
     <h2 class="slide-title">Requisitos técnicos</h2>
     <ul class="big-list">
@@ -700,7 +830,7 @@
     </ul>
   </section>
 
-  <section class="slide slide--close" id="slide-11" data-title="Cierre">
+  <section class="slide slide--close" id="slide-15" data-title="Cierre">
     <p class="eyebrow">Para cerrar</p>
     <h2 class="slide-title">El proyecto final se expone</h2>
     <div class="contact-recap">
